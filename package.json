@@ -4,7 +4,7 @@
   "main": "./build/index.js",
   "types": "./build/",
   "scripts": {
-    "build": "rm -rf build; ./node_modules/.bin/tsc",
+    "build": "rm -rf build; tsc",
     "prepare": "npm run build",
     "test": "./node_modules/.bin/jest --watch",
     "coverage": "./node_modules/.bin/jest --collectCoverage",
@@ -12,12 +12,12 @@
     "graphql-codegen": "graphql-codegen --config ./integration/graphql-codegen.yml"
   },
   "dependencies": {
-    "@graphql-codegen/plugin-helpers": "^1.17.8",
     "change-case": "^4.1.1",
     "ts-poet": "^3.2.2"
   },
   "peerDependencies": {
-    "graphql": "^15.3.0"
+    "graphql": "^15.3.0",
+    "@graphql-codegen/plugin-helpers": "^1.17.8",
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^1.17.8",
